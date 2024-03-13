@@ -4,6 +4,19 @@ Simple web app to build a HTML complete with schema.org recipe markup from a pho
 * I needed a way to move hand written and printed recipes to Paprika, this simple app facilitates that using pyTesseract and OpenAI GPT-4-Turbo
 * As an added bonus, it fills in (guesses) some missing information like prep time, cooking time, servings, keywords, OCR failures, author details etc.
 
+## Install and execute
+```bash
+git clone https://github.com/referefref/AIOCRRecipeConvertor.git
+cd AIOCRRecipeConvertor
+apt install tesseract
+pip install -r requirements.txt
+echo 'OPENAI_API_KEY = "YOURKEYHERE"' >  .env
+python3 aiocrrecipecon.py
+# Server runs on port 5000
+```
+
+
+
 ## Todo
 * Show all recipes as list on the index page
 * Function to deal with multi-page recipes
